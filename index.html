@@ -26,8 +26,8 @@
 							<ul class="p-0">
 								<li class="dot">Prem</li>
 								<li class=" me_part">Me</li>
-								<li class="edu ">Education</li>
 								<li class="exp ">Experience</li>
+								<li class="edu ">Education</li>
 								<li class="show_case ">Showcase</li>
 								<li class="con_tact ">Contact</li>
 							</ul>
@@ -63,6 +63,85 @@
 				<!-- </div> -->
 			</div>
 
+			<div class="section exp_section">
+				<!-- <div class="contanier"> -->
+					<div class="row">
+						<div class="col-sm-12 col-md-12 col-lg-6" data-aos="fade-right"data-aos-duration="1500">
+							<div class="exp_content">
+								<h1>Experience</h1>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-md-6 offset-md-3 ">
+							<div class="exp1" data-aos="fade-up" data-aos-duration="1500">
+								<div class="icon">
+									<span>&#62;</span>
+								</div>
+								<div class="about-experience">
+									<h4>Accenture</h4>
+									<p class="m-0">Application Development Analyst</p>
+								</div>
+								<div class="exp-year">
+									<p class="m-0">2019 - current</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-md-6">
+							<div class="exp1" data-aos="fade-up" data-aos-duration="1500">
+								<div class="icon">
+									<span class="circle-bubble"></span>
+									<span class="circle-logo"></span>
+								</div>
+								<div class="about-experience">
+									<h4>Ei design Pvt Ltd</h4>
+									<p class="m-0">Web developer</p>
+								</div>
+								<div class="exp-year">
+									<p class="m-0">2018 - 2019</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="exp1" data-aos="fade-up" data-aos-duration="1500">
+								<div class="icon">
+									<!-- <span class="r"></span>
+									<span class="x"></span> -->
+									<img src="images/logo.png">
+								</div>
+								<div class="about-experience">
+									<h4>Rxprism Pvt Ltd</h4>
+									<p class="m-0">Web developer</p>
+								</div>
+								<div class="exp-year">
+									<p class="m-0">2017 - 2018</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mt-5">
+						<div class="col-md-6 offset-md-3 ">
+							<div class="exp1" data-aos="fade-up" data-aos-duration="1500">
+								<div class="icon">
+									<img src="images/icon.png">
+								</div>
+								<div class="about-experience">
+									<h4>Indegene Pvt Ltd</h4>
+									<p class="m-0">Web developer</p>
+								</div>
+								<div class="exp-year">
+									<p class="m-0">2015 - 2017</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- </div> -->
+			</div>
+
 			<div class="section education_section">
 				<!-- <div class="contanier"> -->
 					<div class="row">
@@ -92,8 +171,7 @@
 				<!-- </div> -->
 			</div>
 
-			<div class="section exp_section">
-				<!-- <div class="contanier"> -->
+			<!-- <div class="section exp_section">
 					<div class="row">
 						<div class="col-sm-12 col-md-12 col-lg-6" data-aos="fade-right"data-aos-duration="1500">
 							<div class="exp_content">
@@ -123,8 +201,7 @@
 							</div>
 						</div>
 					</div>
-				<!-- </div> -->
-			</div>
+			</div> -->
 
 			<div class="section showcase_section">
 				<!-- <div class="contanier"> -->
@@ -248,10 +325,13 @@ $(function(){
 });
 
 	$(window).on("scroll", function() {
-	    if($(window).scrollTop() > 1750 && $(window).scrollTop() < 3150) {
+	    if($(window).scrollTop() > 450 && $(window).scrollTop() < 1000) {
 	        $("body").addClass("active");
-	    } else {
-	        //remove the background property so it comes transparent again (defined in your css)
+	    }
+	    else if($(window).scrollTop() > 1450 && $(window).scrollTop() < 1650) {
+	        $("body").addClass("active");
+	    }
+	    else {
 	       $("body").removeClass("active");
 	    }
 	});
@@ -283,7 +363,7 @@ $(function(){
 	});
 	$(".header_section .con_tact").click(function() {
 	    $('html,body').animate({
-	        scrollTop: $(".email_section").offset().top-100},
+	        scrollTop: $(".email_section").offset().top-150},
 	        1300);
 	});
 

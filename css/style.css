@@ -407,6 +407,69 @@ img {
 }
 
 
+.exp1{
+    background: #0d2d52;
+    padding: 30px;
+    color: #FFF;
+}
+.icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+    margin-bottom: 5px;
+    font-size: 90px;
+    color: #B800F7;
+    line-height: 0px;
+    width: 10%;
+}
+.circle-bubble:after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #F47721;
+    position: absolute;
+    z-index: 1;
+    border-radius: 20px 20px 20px 0px;
+    top: 45px;
+    left: 25px;
+}
+.circle-logo:after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: #54C3BA;
+    position: absolute;
+    border-radius: 50%;
+    left: 40px;
+    top: 40px;
+}
+
+.r:after{
+    content: "R";
+    font-size: 20px
+    color: #000;
+    position: absolute;
+    left: 60px;
+    top: 40px;
+}
+.r:after{
+    content: "R";
+    font-size: 20px
+    color: #000;
+    position: absolute;
+    left: 60px;
+    top: 40px;
+}
+.about-experience{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+}
+.exp-year{
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+}
 /*.btn_hover {
   border: none;
   display: block;
