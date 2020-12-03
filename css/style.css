@@ -84,7 +84,6 @@ header{
 .discrption{
     max-width: 540px;
     font-size: 20px;
-    letter-spacing: 0.9px;
 }
 .exp_content h3{
     font-size: 30px;
@@ -511,3 +510,84 @@ img {
   -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
   transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }*/
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+.me_section {
+    margin-top: 20%;
+}
+
+.blinktext{
+  font-size: 20px;
+}
+
+.discrption{
+  font-size: 16px;
+  max-width: 310px;
+}
+
+.me_content h1, .exp_content h1, .showcase_content h1{
+  font-size: 50px;
+}
+.exp_part{
+  margin:0 auto !important;
+}
+.s_p1,.s_p2{
+  margin-top: 5%;
+}
+
+.email_part{
+  padding: 9% 9%;
+    min-height: 210px;
+}
+.email_part p{
+  font-size: 16px;
+}
+.email_part h1{
+  font-size: 30px;
+}
+
+.linkdin_part{
+      padding: 20% 19%;
+    margin-top: 5%;
+    margin-left: -5%;
+    min-height: 220px;
+    font-size: 17px;
+    text-align: center;
+}
+.linkdin_part::before{
+  content: "";
+    background-color: #e7edf2;
+    min-height: 240px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: -40px;
+    top: 40px;
+    transform: rotate(-2deg);
+}
+
+.text_wrap{
+      position: absolute;
+    top: 85%;
+    text-align: center;
+    left: -100px;
+    right: 0;
+    padding: 50px 100px 40px 110px;
+    margin-top: -160px;
+}
+.linkdin_part p{
+  max-width: 280px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.linkdin_part p:nth-child(2) {
+    font-size: 25px;
+}
+.linkdin_part p:nth-child(3) {
+    font-size: 14px;
+    max-width: 160px;
+    color: #8FA7B6;
+}
+}
