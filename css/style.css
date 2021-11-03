@@ -28,7 +28,7 @@ header{
     padding: 35px;
     transition: all ease 0.5s;
 }
-header_section{
+.header_section{
   max-width: 1380px;
     width: 100%;
     margin: 0 auto;
