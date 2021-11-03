@@ -56,15 +56,17 @@ header{
     margin-top: 13%;
 }
 .exp_section,.education_section{
-    margin-top: 10%;
+    
     max-width: 1380px;
     margin: 0 auto;
+    margin-top: 10%;
 }
 
 .showcase_section{
-    margin-top: 10%;
+    
     max-width: 1380px;
     margin: 0 auto;
+    margin-top: 10%;
 }
 
 .me_content h1,.exp_content h1,.showcase_content h1{
