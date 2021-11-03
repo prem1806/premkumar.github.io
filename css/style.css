@@ -28,6 +28,11 @@ header{
     padding: 35px;
     transition: all ease 0.5s;
 }
+header_section{
+  max-width: 1380px;
+    width: 100%;
+    margin: 0 auto;
+}
 .header_section ul li{
     list-style-type: none;
     display: inline-block;
