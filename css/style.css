@@ -262,6 +262,8 @@ img {
     transform: scale(1.1); 
 } 
 .email_section{
+    max-width: 1380px;
+    margin: 0 auto;
     margin-top: 10%;
 }
 .email_part{
