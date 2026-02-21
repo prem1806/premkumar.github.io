@@ -1,0 +1,90 @@
+/* ============================================
+   Prem Portfolio - Custom Styles
+   ============================================ */
+
+/* Hide scrollbars across browsers */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  min-height: auto !important;
+}
+
+/* Material Symbols Font Configuration */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Dark Mode Support */
+:root {
+  --color-primary: #FF5F40;
+  --color-bg-light: #FFFFFF;
+  --color-bg-dark: #0F172A;
+  --color-navy-900: #0A1221;
+}
+
+/* Button hover effects */
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Link transitions */
+a {
+  transition: color 0.2s ease;
+}
+
+/* Image lazy loading optimization */
+img {
+  loading: lazy;
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Focus styles for keyboard navigation */
+button:focus,
+a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  header,
+  footer,
+  button {
+    display: none;
+  }
+}

@@ -1,356 +1,417 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-	<title>Prem - Ui developer</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet"> -->
-	<!-- <link rel="icon" href="https://img.icons8.com/ios/50/000000/developer-mode.png" type="image/png" sizes="16x16"> -->
-	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%234a90e2%22></rect><path d=%22M31.84 15.60L57.03 15.60Q68.31 15.60 74.90 20.68Q81.49 25.76 81.49 34.59L81.49 34.59Q81.49 45.34 74.05 51.46Q66.60 57.59 53.71 57.59L53.71 57.59L33.01 57.59L27.83 84.40L18.51 84.40L31.84 15.60ZM39.75 23.07L34.47 50.22L53.37 50.22Q72.02 50.22 72.02 35.03L72.02 35.03Q72.02 29.22 68.16 26.15Q64.31 23.07 56.79 23.07L56.79 23.07L39.75 23.07Z%22 fill=%22%23ffffff%22></path></svg>" />
-	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/fonts.css">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	</style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="description" content="Prem - UI Developer Portfolio showcasing web design and development projects">
+  <meta name="keywords" content="UI Developer, Web Design, Portfolio, Responsive Design">
+  <meta name="author" content="Prem Kumar">
+  <title>Prem | UI Developer Portfolio</title>
+  
+  <!-- Font Preconnect -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  
+  <!-- Tailwind Config (must come AFTER CDN loads) -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/portfolio.css">
+  
 </head>
-<body>
-	<div class="container-fluid">
-		<div class="contanier">
-			<header class="mb-5">
-				<div class="row">
-					<div class="col">
-						<div class="header_section">
-							<ul class="p-0">
-								<li class="dot">Prem</li>
-								<li class=" me_part">Me</li>
-								<li class="exp ">Experience</li>
-								<li class="edu ">Education</li>
-								<li class="show_case ">Showcase</li>
-								<li class="con_tact ">Contact</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</header>
-		</div>
-	</div>
-	<div class="container-fluid">
-		<div class="container">
-			<div class="section me_section" data-aos="fade-in" data-aos-duration="3000">
-				<!-- <div class="contanier"> -->
-					<div class="row">
-						<div class="col-7">
-							<div class="me_content">
-								<!-- <h3 class="mt-3 mb-3">UI developer</h3> -->
-								<h3 class="blinktext mb-5">
-									<span id="typed"></span><span>_</span>
-								</h3>
+<body class="bg-[#FFFFFF] dark:bg-[#0F172A] text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+  
+  <!-- Header Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-[#0F172A]/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+    <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <span class="font-display text-2xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+          Prem<span class="text-[#FF5F40]">.</span>
+        </span>
+      </div>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#me">Me</a>
+        <a class="text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#experience">Experience</a>
+        <a class="text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#education">Education</a>
+        <a class="text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#showcase">Showcase</a>
+        <a class="text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#contact">Contact</a>
+        
+        <!-- Dark Mode Toggle -->
+        <button class="p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400" data-dark-mode-toggle aria-label="Toggle dark mode">
+          <span class="material-symbols-outlined block dark:hidden">dark_mode</span>
+          <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-slate-900 dark:text-white">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </nav>
+  </header>
 
-								<!-- <h1 class="mb-5">UI Developer</h1> -->
-								
-								<p class="discrption mt-3 mb-4">Hello! <br>I am Ui Developer from India, Nellore. I have rich experience in responsive web site design and building. I love to talk with you about our unique.</p>
-							</div>
-						</div>
-						<div class="col-5">
-							<div class="profile">
-								<img src="images/profile.jpg">
-							</div>
-						</div>
-					</div>
-				<!-- </div> -->
-			</div>
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-28 pb-16 md:pt-36 md:pb-20 px-6" id="me">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Text Content -->
+        <div class="order-2 lg:order-1">
+          <div class="w-12 h-1 bg-[#FF5F40] mb-8"></div>
+          <h2 class="text-lg font-medium text-slate-500 dark:text-slate-400 mb-4">Hello!</h2>
+          <h1 class="text-4xl md:text-6xl font-display font-extrabold text-slate-900 dark:text-white leading-[1.1] mb-8">
+            I am UI Developer.
+          </h1>
+          <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-10 max-w-xl">
+            Senior Frontend Developer with 9+ years of experience building scalable web applications and business platforms.
+			Specialized in React-based interfaces, workflow automation dashboards, and production client websites.
 
-			<div class="section exp_section">
-				<!-- <div class="contanier"> -->
-					<div class="row">
-						<div class="col-sm-12 col-md-12 col-lg-6" data-aos="fade-right"data-aos-duration="1500">
-							<div class="exp_content">
-								<h1>Experience</h1>
-							</div>
-						</div>
-					</div>
+			Experienced in transforming manual operational processes into digital systems, improving efficiency, reducing errors, and enhancing user experience across enterprise and customer-facing products.
+          </p>
+          <a class="inline-flex items-center justify-center px-8 py-4 bg-[#FF5F40] text-white font-semibold rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-[#FF5F40]/20" href="#contact">
+            Let's Talk
+          </a>
+        </div>
+        
+        <!-- Profile Image -->
+        <div class="order-1 lg:order-2 flex justify-center">
+          <div class="relative group">
+            <div class="absolute -inset-4 bg-[#FF5F40]/20 rounded-2xl blur-2xl group-hover:bg-[#FF5F40]/30 transition duration-500"></div>
+            <img alt="Professional Profile Photo" class="relative w-full max-w-md aspect-[4/5] object-cover rounded-2xl opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 shadow-2xl" src="images/pic.jpg">
+          </div>
+        </div>
+      </div>
+    </section>
 
-					<div class="row mt-5">
-						<div class="col-sm-12 col-md-12 col-lg-6 mb-5">
-							<div class="exp1" data-aos="fade-up" data-aos-duration="1500">
-								<div class="icon">
-									<img src="images/bosch.png">
-								</div>
-								<div class="about-experience">
-									<h4>Bosch</h4>
-									<p class="m-0">Senior developer</p>
-								</div>
-								<div class="exp-year">
-									<p class="m-0">2022 - current</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-lg-6 mb-5">
-							<div class="exp1" data-aos="fade-up" data-aos-duration="1500">
-								<div class="icon">
-									<span>&#62;</span>
-								</div>
-								<div class="about-experience">
-									<h4>Accenture</h4>
-									<p class="m-0">Application Development Senior Analyst</p>
-								</div>
-								<div class="exp-year">
-									<p class="m-0">2019 - 2022</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row mt-5">
-						<div class="col-sm-12 col-md-12 col-lg-6 mb-5">
-							<div class="exp1" data-aos="fade-up" data-aos-duration="1500">
-								<div class="icon">
-									<span class="circle-bubble"></span>
-									<span class="circle-logo"></span>
-								</div>
-								<div class="about-experience">
-									<h4>Ei design Pvt Ltd</h4>
-									<p class="m-0">Web developer</p>
-								</div>
-								<div class="exp-year">
-									<p class="m-0">2018 - 2019</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-lg-6">
-							<div class="exp1" data-aos="fade-up" data-aos-duration="1500">
-								<div class="icon">
-									<img src="images/logo.png">
-								</div>
-								<div class="about-experience">
-									<h4>Rxprism Pvt Ltd</h4>
-									<p class="m-0">Web developer</p>
-								</div>
-								<div class="exp-year">
-									<p class="m-0">2017 - 2018</p>
-								</div>
-							</div>
-						</div>
-					</div>
+    <!-- Experience Section -->
+    <section class="py-16 bg-[#0A1221] dark:bg-slate-950 text-white overflow-hidden" id="experience">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-4xl md:text-6xl font-display font-black text-[#FF5F40] mb-10">Experience</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Experience Card 1 -->
+          <div class="p-6 bg-slate-900/50 border border-white/10 rounded-2xl flex items-start gap-4 hover:bg-slate-900/80 transition-colors">
+            <div class="w-12 h-12 flex-shrink-0 bg-white/5 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#FF5F40]">corporate_fare</span>
+            </div>
+            <div class="flex-grow">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold">Bosch</h3>
+                <span class="text-slate-400 text-sm">2022 - Current</span>
+              </div>
+              <p class="text-slate-400">Senior Developer</p>
+            </div>
+          </div>
 
-					<div class="row mt-5">
-						<div class="col-sm-12 col-md-12  col-lg-6 offset-lg-3">
-							<div class="exp1" data-aos="fade-up" data-aos-duration="1500">
-								<div class="icon">
-									<img src="images/icon.png">
-								</div>
-								<div class="about-experience">
-									<h4>Indegene Pvt Ltd</h4>
-									<p class="m-0">Web developer</p>
-								</div>
-								<div class="exp-year">
-									<p class="m-0">2015 - 2017</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- </div> -->
-			</div>
+          <!-- Experience Card 2 -->
+          <div class="p-6 bg-slate-900/50 border border-white/10 rounded-2xl flex items-start gap-4 hover:bg-slate-900/80 transition-colors">
+            <div class="w-12 h-12 flex-shrink-0 bg-white/5 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#FF5F40]">terminal</span>
+            </div>
+            <div class="flex-grow">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold">Accenture</h3>
+                <span class="text-slate-400 text-sm">2019 - 2022</span>
+              </div>
+              <p class="text-slate-400">Application Development Senior Analyst</p>
+            </div>
+          </div>
 
-			<div class="section education_section">
-				<!-- <div class="contanier"> -->
-					<div class="row">
-						<div class="col-sm-12 col-md-12 col-lg-6" data-aos="fade-right"data-aos-duration="1500">
-							<div class="exp_content">
-								<h1>Education</h1>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-lg-6">
-							<div class="exp_part pl-4 pt-3 pb-3 mb-4" data-aos="fade-left" data-aos-duration="1500">
-								<span>Audisankara institute of technology</span>
-								<p>Btech</p>
-								<p>2011 - 2015</p>
-							</div>
-							<div class="exp_part pl-4 pt-3 pb-3 ml-5 mb-4" data-aos="fade-left" data-aos-duration="1500">
-								<span>Viswasanthi Jr college</span>
-								<p>Intermediate</p>
-								<p>2009 - 2011</p>
-							</div>
-							<div class="exp_part pl-4 pt-3 pb-3 mb-4 ml-8" data-aos="fade-left" data-aos-duration="1500">
-								<span>ZPP High School Vavilla</span>
-								<p>Secondary School Certificate</p>
-								<p>2004 - 2009</p>
-							</div>
-						</div>
-					</div>
-				<!-- </div> -->
-			</div>
-			<div class="section showcase_section">
-				<!-- <div class="contanier"> -->
-					<div class="showcase_content" data-aos="fade-right" data-aos-duration="1500">
-						<h1>Showcase</h1>
-					</div>
-					<div class="row">
-						<div class="col-sm-12 col-md-12 col-lg-6">
-							<div class="showcase_part s_p1 cardcolor1 p-5" data-aos="fade-up" data-aos-duration="1500">
-								<!-- <p>Design Shift</p>
-								<h3>Ui development</h3> -->
-								<a href="http://designshift.in/" target="_blank">
-									<img src="images/showcase1.png">
-								</a>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-lg-6">
-							<div class="showcase_part s_p2 cardcolor2 p-5" data-aos="fade-up" data-aos-duration="1500">
-								<!-- <p>Design Shift</p>
-								<h3>Ui development</h3> -->
-								<img src="images/showcase2.png">
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-lg-6">
-							<div class="showcase_part s_p1 cardcolor1 p-5" data-aos="fade-up" data-aos-duration="1500">
-								<!-- <p>Movie search</p>
-								<h3>Ui development</h3> -->
-								<a href="https://prem1806.github.io/" target="_blank">
-									<img src="images/showcase3.png">
-								</a>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md-12 col-lg-6">
-							<div class="showcase_part s_p2 cardcolor2 p-5" data-aos="fade-up" data-aos-duration="1500">
-								<a href="https://github.com/prem1806/bootstrap_websites" target="_blank">
-									<img src="images/showcase4.png">
-								</a>
-								<!-- <p>Project 1</p>
-								<h3>Ui development</h3> -->
-							</div>
-						</div>
-					</div>
-				<!-- </div> -->
-			</div>
+          <!-- Experience Card 3 -->
+          <div class="p-6 bg-slate-900/50 border border-white/10 rounded-2xl flex items-start gap-4 hover:bg-slate-900/80 transition-colors">
+            <div class="w-12 h-12 flex-shrink-0 bg-white/5 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#FF5F40]">brush</span>
+            </div>
+            <div class="flex-grow">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold">Ei design Pvt Ltd</h3>
+                <span class="text-slate-400 text-sm">2018 - 2019</span>
+              </div>
+              <p class="text-slate-400">Web Developer</p>
+            </div>
+          </div>
 
-			<div class="section email_section">
-				<div class="row">
-					<div class="col-sm-7 col-md-7">
-						<div class="email_part">
-							<p>Email me at</p>
-							<h1><a href="mailto:premkumarparsimani@gmail.com?Subject=Hello%20again">premkumarparsimani@gmail.com</a></h1>
-						</div>
-					</div>
-					<div class="col-sm-5 col-md-5">
-						<div class="linkdin_part">
-							<div class="text_wrap">
-								<p>
-									Would you like to learn about my journey as a Ui developer ? Check me out on
-								</p>
-								<p><a href="https//www.linkedin.com/in/venkatapremkumar" target="_blank">Linked In</a></p>
-								<p>
-									BECAUSE RESUMES ARE OLD FASHIONED NOW
-								</p>
-							</div>
+          <!-- Experience Card 4 -->
+          <div class="p-6 bg-slate-900/50 border border-white/10 rounded-2xl flex items-start gap-4 hover:bg-slate-900/80 transition-colors">
+            <div class="w-12 h-12 flex-shrink-0 bg-white/5 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#FF5F40]">devices</span>
+            </div>
+            <div class="flex-grow">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold">Rxprism Pvt Ltd</h3>
+                <span class="text-slate-400 text-sm">2017 - 2018</span>
+              </div>
+              <p class="text-slate-400">Web Developer</p>
+            </div>
+          </div>
+        </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
+        <!-- Experience Card 5 -->
+        <div class="mt-6 flex justify-center">
+          <div class="p-6 bg-slate-900/50 border border-white/10 rounded-2xl flex items-start gap-4 hover:bg-slate-900/80 transition-colors w-full md:w-1/2">
+            <div class="w-12 h-12 flex-shrink-0 bg-white/5 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-[#FF5F40]">code</span>
+            </div>
+            <div class="flex-grow">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-2xl font-bold">Indegene Pvt Ltd</h3>
+                <span class="text-slate-400 text-sm">2015 - 2017</span>
+              </div>
+              <p class="text-slate-400">Web Developer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-			
+    <!-- Education Section -->
+    <section class="py-16 px-6 bg-slate-50 dark:bg-slate-900" id="education">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Section Title -->
+        <div>
+          <h2 class="text-4xl md:text-6xl font-display font-black text-[#FF5F40]">Education</h2>
+        </div>
+        
+        <!-- Timeline -->
+        <div class="space-y-8">
+          <!-- Education Item 1 -->
+          <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800">
+            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FF5F40] border-4 border-slate-50 dark:border-slate-900"></div>
+            <h3 class="text-2xl font-bold mb-1">Audisankara Institute of Technology</h3>
+            <p class="text-[#FF5F40] font-semibold mb-2">Btech</p>
+            <p class="text-slate-500 dark:text-slate-400">2011 - 2015</p>
+          </div>
 
+          <!-- Education Item 2 -->
+          <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800">
+            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FF5F40] border-4 border-slate-50 dark:border-slate-900"></div>
+            <h3 class="text-2xl font-bold mb-1">Viswasanthi Jr College</h3>
+            <p class="text-[#FF5F40] font-semibold mb-2">Intermediate</p>
+            <p class="text-slate-500 dark:text-slate-400">2009 - 2011</p>
+          </div>
 
-			
-		</div>
+          <!-- Education Item 3 -->
+          <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800">
+            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#FF5F40] border-4 border-slate-50 dark:border-slate-900"></div>
+            <h3 class="text-2xl font-bold mb-1">ZPP High School Vavilla</h3>
+            <p class="text-[#FF5F40] font-semibold mb-2">Secondary School Certificate</p>
+            <p class="text-slate-500 dark:text-slate-400">2004 - 2009</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <!-- Showcase Section -->
+    <section class="py-16 px-6 bg-white dark:bg-[#0F172A]" id="showcase">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl md:text-6xl font-display font-black text-[#FF5F40] mb-10">Showcase</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Project Card 1 -->
+          <div class="group flex flex-col bg-slate-50 dark:bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="w-full h-48 overflow-hidden">
+              <img alt="Callidus Car Care - Automobile detailing service" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgI3mBL3OieK9Z-ew28LkFh2OoYVLD4XFtUUiHeuIxemwiVTYkMcAJ_lFzIs9vcSQHOZTOy3oEabIAfE5DVuSA5sQ2iqWxwzGxWEMibq1IReyRacU-1hytensVLOYcUkf83rUZ04AiaqHJGp_qPHs1mjs_YzARtbuzIQ75aNMo8dY3czbJdVJSDv9NpCUwoBBjl-47quHwuVInV8zrHUAoF-Dc2AJJUak4qqJG8Keq_XNNWqK1c27oI16a8gFDeD2IeVvyXGSbTq6G">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-[10px] font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                  Freelance Project
+                </div>
+                <span class="text-[11px] font-medium text-slate-400 uppercase tracking-widest">Frontend Developer</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white">Callidus Car Care</h3>
+              <p class="text-sm font-semibold text-[#FF5F40] mb-4">Automobile detailing service</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Designed responsive business website
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Created service pages (PPF, coating, wash packages)
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">HTML</span>
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">CSS</span>
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">JavaScript</span>
+              </div>
+              <div class="p-3 bg-emerald-50 dark:bg-emerald-900/10 rounded-xl border border-emerald-100 dark:border-emerald-900/20">
+                <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1">Impact</p>
+                <p class="text-sm text-emerald-800 dark:text-emerald-300">Increased local customer enquiries</p>
+              </div>
+              <div class="mt-auto pt-4 border-t border-slate-200 dark:border-slate-800">
+                <a class="inline-flex items-center gap-2 text-sm font-bold text-[#FF5F40] hover:gap-3 transition-all focus:outline-none" href="https://calliduscarcare.com" target="_blank">
+                  Live Demo
+                  <span class="material-symbols-outlined text-base">open_in_new</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
-	<script type="text/javascript">
-  	AOS.init();
-	// var options = {
-	//   strings: ['UI developer', '&amp; a second sentence.','prem','kumar'],
-	//   typeSpeed: 190
-	// };
+          <!-- Project Card 2 -->
+          <div class="group flex flex-col bg-slate-50 dark:bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="w-full h-48 overflow-hidden">
+              <img alt="RRI Hitech Radiology - Medical radiology service website" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJgea4JlB4dZu0L4sCPRAHaKixluUrZQQ5C5rdpsy0V5uB4PlHcAec8Xbops_FwyOLcod5UMtZ7WMExCUPIDcsct7r5TMZ1A9nqjdORv--tHwsCyT6AV3I90dWU73sHTtOJfrO--hDbWSeKJsvQdyh5RsaPHLMoy1TljLfl4GYGOM_pIeV7agzAN0_Ib6MtlbQqzsc7raaceEDp7wJFuevWutkTxctQ9rW482yFxBgyfd3y_AR5RIrR7YTxra0c9i0jw52YQmLrmU1">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 dark:bg-purple-900/30 text-[10px] font-bold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+                  Freelance Project
+                </div>
+                <span class="text-[11px] font-medium text-slate-400 uppercase tracking-widest">Frontend Developer</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white">RRI Hitech Radiology</h3>
+              <p class="text-sm font-semibold text-[#FF5F40] mb-4">Medical radiology service</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Structured healthcare service information UI
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Appointment & contact flow UX
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Accessibility-friendly layout
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Performance optimized pages
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">HTML</span>
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">CSS</span>
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">JavaScript</span>
+              </div>
+              <div class="p-3 bg-emerald-50 dark:bg-emerald-900/10 rounded-xl mb-8 border border-emerald-100 dark:border-emerald-900/20">
+                <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1">Impact</p>
+                <p class="text-sm text-emerald-800 dark:text-emerald-300">Helped patients easily understand services & contact hospital</p>
+              </div>
+              <div class="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800">
+                <a class="inline-flex items-center gap-2 text-sm font-bold text-[#FF5F40] hover:gap-3 transition-all focus:outline-none" href="https://rrihitechradiology.com/" target="_blank">
+                  Live Demo
+                  <span class="material-symbols-outlined text-base">open_in_new</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
-	// var typed = new Typed('#typed', options);
+          <!-- Project Card 3 -->
+          <div class="group flex flex-col bg-slate-50 dark:bg-slate-900/50 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+            <div class="w-full h-48 overflow-hidden">
+              <img alt="LifeVR - Virtual Reality solutions company website" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 shadow-inner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFBAjwHeYO7PaEgOv4sM83TtAJBDWZNxnevya9qg1DodAKvMMZ0rBcwo41ex053vnp00uUmkuhmgEzY6JoTrCsrHOmlylmZsdZq9nlbBDJLEQAjzxwg2gFXOFgN02jaVmoLNqVuD2DbEyT6ND-7mQYGkpEh659RwLSAUCpSgeduLbtKurC-JlirqHyHT6KjVYJDyDw7IMtCYeGXF1ZCQ0tmLspq711Taonjjdh__si_REyCEvtd4x6--ERpb4XysoZ2RoSSxyiWa7L">
+            </div>
+            <div class="p-6 flex flex-col flex-grow">
+              <div class="flex justify-between items-start mb-4">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-[10px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                  Freelance Project
+                </div>
+                <span class="text-[11px] font-medium text-slate-400 uppercase tracking-widest">Frontend Developer</span>
+              </div>
+              <h3 class="text-2xl font-bold mb-2 text-slate-900 dark:text-white">LifeVR</h3>
+              <p class="text-sm font-semibold text-[#FF5F40] mb-4">Virtual Reality solutions company</p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Designed modern corporate website
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Structured service pages for VR solutions
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Built responsive layouts for all devices
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Created engaging sections for vision & offerings
+                </li>
+                <li class="flex items-start gap-2 text-sm text-slate-600 dark:text-slate-400">
+                  <span class="material-symbols-outlined text-[#FF5F40] text-sm mt-0.5">check_circle</span>
+                  Implemented enquiry/contact flow
+                </li>
+              </ul>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">HTML</span>
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">CSS</span>
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">JavaScript</span>
+                <span class="px-2 py-1 text-[10px] font-bold bg-slate-200 dark:bg-slate-800 rounded uppercase text-slate-600 dark:text-slate-400">Responsive Design</span>
+              </div>
+              <div class="p-3 bg-emerald-50 dark:bg-emerald-900/10 rounded-xl mb-8 border border-emerald-100 dark:border-emerald-900/20">
+                <p class="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-1">Impact</p>
+                <p class="text-sm text-emerald-800 dark:text-emerald-300">Improved brand credibility, enabled easy service understanding, and generated project enquiries</p>
+              </div>
+              <div class="mt-auto pt-6 border-t border-slate-200 dark:border-slate-800">
+                <a class="inline-flex items-center gap-2 text-sm font-bold text-[#FF5F40] hover:gap-3 transition-all focus:outline-none" href="https://lifevr.in" target="_blank">
+                  Live Demo
+                  <span class="material-symbols-outlined text-base">open_in_new</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section class="py-16 px-6 bg-slate-100 dark:bg-slate-950/50" id="contact">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch gap-0 rounded-[2rem] overflow-hidden shadow-2xl">
+        <!-- Email Contact -->
+        <div class="flex-1 bg-[#FF5F40] p-10 md:p-16 text-white">
+          <p class="text-lg font-medium opacity-80 mb-4">Email me at</p>
+          <a class="text-3xl md:text-5xl font-display font-extrabold break-all hover:underline leading-tight" href="mailto:premkumarparsmani@gmail.com">
+            premkumarparsmani@gmail.com
+          </a>
+        </div>
+        
+        <!-- LinkedIn Contact -->
+        <div class="flex-1 bg-white dark:bg-slate-900 p-10 md:p-16 flex flex-col justify-center items-center text-center">
+          <p class="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-xs">
+            Would you like to learn about my journey as a UI developer?
+          </p>
+          <a class="text-4xl md:text-5xl font-display font-extrabold text-[#0A66C2] hover:scale-105 transition-transform" href="#">
+            LinkedIn
+          </a>
+          <p class="mt-8 text-xs uppercase tracking-[0.2em] font-bold text-slate-400">
+            Because Resumes are old fashioned now
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-$(function(){
+  <!-- Footer -->
+  <footer class="py-8 px-6 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      <p class="text-slate-500 dark:text-slate-400 text-sm">
+        © 2024 Prem. All rights reserved.
+      </p>
+      <div class="flex gap-6">
+        <a class="text-slate-400 hover:text-[#FF5F40] transition-colors" href="#">Twitter</a>
+        <a class="text-slate-400 hover:text-[#FF5F40] transition-colors" href="#">GitHub</a>
+        <a class="text-slate-400 hover:text-[#FF5F40] transition-colors" href="#">Dribbble</a>
+      </div>
+    </div>
+  </footer>
 
-  var typed = new Typed('#typed', {
-    strings: ["Ui Developer","Traveller","Photographer"],
-    // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
-    stringsElement: null,
-    // typing speed
-    typeSpeed: 90,
-    // time before typing starts
-    startDelay: 1,
-    // backspacing speed
-    backSpeed: 100,
-    // time before backspacing
-    backDelay: 500,
-    // loop
-    loop: true,
-    // false = infinite
-    loopCount: 1000,
-    // show cursor
-    showCursor: false,
-    // character for cursor
-    cursorChar: "|",
-    // attribute to type (null == text)
-    attr: null,
-    // either html or text
-    contentType: 'html',
-    // call when done callback function
-    callback: function() {},
-    // starting callback function before each string
-    preStringTyped: function() {},
-    //callback for every typed string
-    onStringTyped: function() {},
-    // callback for reset
-    resetCallback: function() {}
-  });
-});
+  <!-- Scripts -->
+  <script src="js/portfolio.js" defer></script>
 
-	$(window).on("scroll", function() {
-	    if($(window).scrollTop() > 450 && $(window).scrollTop() < 1000) {
-	        $("body").addClass("active");
-	    }
-	    else {
-	       $("body").removeClass("active");
-	    }
-	});
-
-	
-
-	$(".header_section .me_part").click(function() {
-	    $('html,body').animate({
-	        scrollTop: $("#ourstory").offset().top-200},
-	        1300);
-	});
-
-	$(".header_section .edu").click(function() {
-	    $('html,body').animate({
-	        scrollTop: $(".education_section").offset().top-100},
-	        1300);
-	});
-
-	$(".header_section .exp").click(function() {
-	    $('html,body').animate({
-	        scrollTop: $(".exp_section").offset().top-100},
-	        1300);
-	});
-
-	$(".header_section .show_case").click(function() {
-	    $('html,body').animate({
-	        scrollTop: $(".showcase_section").offset().top-100},
-	        1300);
-	});
-	$(".header_section .con_tact").click(function() {
-	    $('html,body').animate({
-	        scrollTop: $(".email_section").offset().top-150},
-	        1300);
-	});
-
-
-	</script>
 </body>
 </html>
