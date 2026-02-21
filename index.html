@@ -58,9 +58,28 @@
       </div>
       
       <!-- Mobile Menu Button -->
-      <button class="md:hidden text-slate-900 dark:text-white">
+      <button class="md:hidden text-slate-900 dark:text-white" id="mobile-menu-btn" aria-label="Toggle mobile menu">
         <span class="material-symbols-outlined">menu</span>
       </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="hidden md:hidden fixed top-20 left-0 right-0 bg-white dark:bg-[#0F172A] border-b border-slate-200 dark:border-slate-800 shadow-lg">
+      <div class="px-6 py-4 space-y-3">
+        <a class="block py-2 text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#me">Me</a>
+        <a class="block py-2 text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#experience">Experience</a>
+        <a class="block py-2 text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#education">Education</a>
+        <a class="block py-2 text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#showcase">Showcase</a>
+        <a class="block py-2 text-sm font-medium hover:text-[#FF5F40] transition-colors focus:outline-none" href="#contact">Contact</a>
+        
+        <!-- Mobile Dark Mode Toggle -->
+        <button class="w-full py-2 px-3 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 flex items-center justify-center gap-2 text-sm font-medium" data-dark-mode-toggle aria-label="Toggle dark mode">
+          <span class="material-symbols-outlined block dark:hidden text-base">dark_mode</span>
+          <span class="material-symbols-outlined hidden dark:block text-base">light_mode</span>
+          <span class="block dark:hidden">Dark Mode</span>
+          <span class="hidden dark:block">Light Mode</span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -73,7 +92,7 @@
           <div class="w-12 h-1 bg-[#FF5F40] mb-8"></div>
           <h2 class="text-lg font-medium text-slate-500 dark:text-slate-400 mb-4">Hello!</h2>
           <h1 class="text-4xl md:text-6xl font-display font-extrabold text-slate-900 dark:text-white leading-[1.1] mb-8">
-            I am UI Developer.
+            I am Frontend Developer.
           </h1>
           <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-10 max-w-xl">
             Senior Frontend Developer with 9+ years of experience building scalable web applications and business platforms.
@@ -403,7 +422,7 @@
         © 2024 Prem. All rights reserved.
       </p>
       <div class="flex gap-6">
-        <a class="text-slate-400 hover:text-[#FF5F40] transition-colors" href="#">GitHub</a>
+        <a class="text-slate-400 hover:text-[#FF5F40] transition-colors" href="https://github.com/prem1806" target="_blank">GitHub</a>
       </div>
     </div>
   </footer>

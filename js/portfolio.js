@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initSmoothScroll();
   initActiveNavigation();
   initDarkMode();
+  initMobileMenu();
 });
 
 // ============================================
@@ -79,6 +80,36 @@ function initDarkMode() {
   darkModeToggle.addEventListener('click', function () {
     const isDark = document.documentElement.classList.toggle('dark');
     localStorage.setItem('darkMode', isDark);
+  });
+}
+
+// ============================================
+// Mobile Menu Toggle
+// ============================================
+function initMobileMenu() {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+
+  if (!mobileMenuBtn || !mobileMenu) return;
+
+  // Toggle menu on button click
+  mobileMenuBtn.addEventListener('click', function () {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close menu when a link is clicked
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+    }
   });
 }
 
