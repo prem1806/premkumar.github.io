@@ -1,3 +1,5 @@
+import profile from '../images/pic.jpg'
+
 export default function Hero() {
   return (
     <section className="pt-28 pb-16 md:pt-36 md:pb-20 px-6" id="me">
@@ -31,7 +33,7 @@ export default function Hero() {
             <img
               alt="Professional Profile Photo"
               className="relative w-full max-w-md aspect-[4/5] object-cover rounded-2xl opacity-90 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-700 shadow-2xl"
-              src="/images/pic.jpg"
+              src={profile}
             />
           </div>
         </div>

@@ -1,5 +1,10 @@
 export type BadgeColor = 'blue' | 'purple' | 'emerald'
 
+import showcase_thumb1 from '../images/showcase_thumb1.png'
+import showcase_thumb2 from '../images/showcase_thumb2.png'
+import showcase_thumb3 from '../images/showcase_thumb3.png'
+import designshift from '../images/designshift.png'
+
 export interface Project {
   image: string
   alt: string
@@ -15,7 +20,7 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    image: '/images/showcase_thumb1.png',
+    image: showcase_thumb1,
     alt: 'Callidus Car Care - Automobile detailing service',
     badge: 'Freelance Project',
     badgeColor: 'blue',
@@ -30,7 +35,7 @@ export const projects: Project[] = [
     link: 'https://calliduscarcare.com',
   },
   {
-    image: '/images/showcase_thumb2.png',
+    image: showcase_thumb2,
     alt: 'RRI Hitech Radiology - Medical radiology service website',
     badge: 'Freelance Project',
     badgeColor: 'purple',
@@ -47,7 +52,7 @@ export const projects: Project[] = [
     link: 'https://rrihitechradiology.com/',
   },
   {
-    image: '/images/showcase_thumb3.png',
+    image: showcase_thumb3,
     alt: 'LifeVR - Virtual Reality solutions company website',
     badge: 'Freelance Project',
     badgeColor: 'emerald',
@@ -65,7 +70,7 @@ export const projects: Project[] = [
     link: 'https://lifevr.in',
   },
   {
-    image: '/images/designshift.png',
+    image: designshift,
     alt: 'Design Shift - UI/UX design education platform',
     badge: 'Freelance Project',
     badgeColor: 'blue',
