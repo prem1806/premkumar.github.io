@@ -1,21 +1,19 @@
-/* Tailwind Configuration as External File */
-module.exports = {
-  content: ['./index.html'],
+/** @type {import('tailwindcss').Config} */
+export default {
   darkMode: 'class',
+  content: [
+    './index.html',
+    './src/**/*.{ts,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
         primary: '#FF5F40',
-        'background-light': '#FFFFFF',
-        'background-dark': '#0F172A',
-        'navy-900': '#0A1221',
+        navy: '#0A1221',
       },
       fontFamily: {
         display: ['Outfit', 'sans-serif'],
         sans: ['Inter', 'sans-serif'],
-      },
-      borderRadius: {
-        DEFAULT: '0.75rem',
       },
     },
   },
@@ -23,4 +21,4 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
   ],
-};
+}
